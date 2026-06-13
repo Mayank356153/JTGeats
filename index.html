@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JTGeats – Authentic Home Food in India</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./images/service-man.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="hero">
+    <div class="logo">JTGeats</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#hero">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav_icon">
+      <img src="./images/search_icon.png" alt="search_icon">
+      <img src="./images/cart_icon.png" alt="cart_icon">
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" >
+    <div class="hero-text">
+      <span class="hero-heading">Authentic Home<br>food in India</span>
+      <p class="hero-sub">JTGeats is a courier service in which authentic home cook food is delivered to a customer.</p>
+      <div class="search-bar">
+        <input type="text" placeholder="Search food you love" id="searchInput" />
+        <button onclick="handleSearch()">Search</button>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <img src="./images/chef.png" alt="Chef cooking authentic home food" />
+    </div>
+  </section>
+
+
+  <!-- Menu -->
+  <div class="sections-wrapper" id="menu">
+
+    <!-- Menu Heading -->
+    <h2 class="section-title">Home Kitchen</h2>
+    <div class="food-grid" id="kitchenGrid"></div>
+
+    <!-- Popular Items -->
+    <h2 class="popular-title">Popular Items</h2>
+    <div class="popular-carousel-wrapper">
+      <!-- left arrow -->
+      <button class="carousel-arrow-left" onclick="slideCarousel(-1)" aria-label="Play">
+         <div class="left-icon" aria-hidden="true"></div>
+      </button>
+
+        <div class="popular-carousel" id="popularCarousel"></div>
+
+        <!-- right arrow -->
+        <button class="carousel-arrow-right" onclick="slideCarousel(1)" aria-label="Next">
+          <div class="right-icon" aria-hidden="true"></div>
+        </button>
+    </div>
+   
+    <!-- Request Dish -->
+    <div class="request-wrap">
+      <button class="request-btn">Request a Dish</button>
+    </div>
+  </div>
+
+
+  <!-- ── SERVICE SECTION ── -->
+  <section class="service-section" id="blog">
+    <h2 class="service-heading">We are providing best <br>home cooked food delivery service.</h2>
+    <p class="service-sub">
+      Away from home and craving the tasty homemade recipes?<br>
+      Choose from a selection of our delicious home cooked dishes
+    </p>
+
+    <div class="video-wrapper" >
+      <img src="images/service-thumnail.png" alt="Home cooked food delivery"
+           onerror="this.src='https://placehold.co/860x484/1a1a2e/ffffff?text=Watch+Our+Story'"/>
+      
+    </div>
+  </section>
+  <div class="service-green-bg"></div>
+ 
+
+  <!-- ── CONTACT SECTION ── -->
+  <section class="contact-section" id="contact">
+    <!-- contact-left -->
+    <div class="contact-left">
+      <h2 class="contact-heading">Do you have a question<br>or want to become a seller?</h2>
+      <p class="contact-sub">Fill this form and our manager will contact you next 48 hours.</p>
+
+      <div class="contact-row">
+        <input type="text"  class="contact-input" id="contactName"  placeholder="Your Name"    autocomplete="name"/>
+        <input type="email" class="contact-input" id="contactEmail" placeholder="Your e-mail"  autocomplete="email"/>
+      </div>
+      <textarea class="contact-input" id="contactMsg" placeholder="Your message"></textarea>
+      <button class="contact-submit" onclick="submitContact()">Submit</button>
+    </div>
+
+    <!-- contact-right -->
+    <div class="contact-right">
+      <img src="images/service-man.png" alt="Fast food delivery rider"
+           onerror="this.style.display='none'"/>
+    </div>
+
+  </section>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">✅ Message sent! We'll reply within 48 hours.</div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">JTGeats</div>
+
+      <ul class="footer-nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#hero">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-socials">
+        <!-- Facebook icon -->
+        <a class="footer-social-btn" href="#" aria-label="Facebook">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fff">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram icon-->
+        <a class="footer-social-btn" href="#" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
